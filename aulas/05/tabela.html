@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula tabelas</title>
+</head>
+<body>
+    <h1>aula tabelas</h1>
+
+    <h2>introduçao as tabelas em html</h2>
+
+    <p>
+        tabelas sao estruturas em html que permitem a organizacao de dados em linhas e colunas.
+        sao comumente usadas para exibir calendarios ,horarios, lista de preco ,etc
+    </p>
+
+    <h2>estrutura basica de uma tabela</h2>
+
+    <p>
+        a estrutura basica de uma tabela em html e compodta por varias tags:
+    </p>
+
+    <ul>
+        <li>table:define o inicio e fim de uma tabela.</li>
+        <li>tr:define uma linha na tabela.</li>
+        <li>td:define uma celula dentro de uma linha (daods)</li>
+        <li>th:define uma celula de cabecalho</li>    
+    </ul>
+
+    <h2>exemplo 1: tabela basica</h2>
+
+    <table border="1">
+        <tr>
+            <th>nome</th>
+            <th>idade</th>
+            <th>profissao</th>
+        </tr>
+        <tr>
+            <td>ana</td>
+            <td>28</td>
+            <td>engenheira</td>
+        </tr>
+        <tr>
+            <td>bruno</td>
+            <td>34</td>
+            <td>medico</td>
+        </tr>
+    </table>
+
+    <h3>explicação</h3>
+    <ul>
+        <li>nesse exeplo, usamos <b>th</b> para o cabeçalho e <b>td</b> para os dados.</li>
+
+        <li> o atributo <em>border="1"</em> e usado para adicionar bordas a tabela</li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <th>diciplina</th>
+            <th>un1</th>
+            <th>un2</th>
+            <th>un3</th>
+            <th>un4</th>
+        </tr>
+        <tr>
+            <td>portugues</td>
+            <td>7</td>
+            <td>8</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>matematica</td>
+            <td>8</td>
+            <td>5</td>
+            <td>5</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>ingles</td>
+            <td>7</td>
+            <td>8</td>
+            <td>8</td>
+            <td>7</td>
+        </tr>
+    </table>
+
+    <h2>mesclagem de celulas </h2>
+
+    <p>
+        a mesclagem de celulas pode ser feita tanto em colunas quanto em linhas
+    </p>
+    <ul>
+        <li>colspan: mescla celulas horizontalmente (colunas)</li>
+        <li>rowspan: mescla celulas verticalmente (linhas)</li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <th>nome</th>
+            <th>idade</th>
+            <th>profissao</th>         
+        </tr>
+        <tr>
+            <td rowspan="2">carlos</td>
+            <td>30</td>
+            <td>professor</td>         
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>arquiteto</td>         
+        </tr>
+        <tr>
+            <td>daniela</td> 
+            <td colspan="2">designer grafico</td>         
+        </tr>
+    </table>
+
+    <h3>exeplicação:</h3>
+
+    <ul>
+        <li><b> rowspan="2":</b> a celula "carlos" se expande verticalmente para cobrir
+             duas linhas</li>
+
+        <li><b> colspan="2":</b>a celula "designer grafico" se expande horizontalmente 
+            para cobrir duas colunas.</li>
+    </ul>
+
+    <h2>adicionando um cabeçalho e rodape a tabela</h2>
+
+    <p>
+        alem das linhas de dados , uma tabela pode ter um cabeçalho ( <b>thead</b> ), um corpo
+        ( <b>tbody</b> ) e um rodape ( <b>tfoot</b> )
+    </p>
+
+    <table border="1">
+        <thead> <!--agrupa os cabeçalhos-->
+            <tr>
+                <th>produto</th>
+                <th>quantidade</th>
+                <th>preço unitario</th>
+            </tr>
+        </thead> 
+
+        <tbody><!--agrupar os dados-->
+            <tr>
+                <td>caneta</td>
+                <td>10</td>
+                <td>R$2,00</td>
+            </tr>
+            <tr>
+                <td>caderno</td>
+                <td>5</td>
+                <td>R$15,00</td>
+            </tr>
+        </tbody>
+
+        <tfoot> <!--agrupa o rodape-->
+            <tr>
+                <td colspan="2">total</td>
+                <td>R$ 95,00</td>
+            </tr> 
+        </tfoot>
+    </table>
+
+    <h3>exeplicação:</h3>
+        <ul>
+            <li><b>thead:</b> define o cabeçalho de tabela</li>
+            <li><b>tbody:</b>define o corpo da tabela , onde ficam os dados</li>
+            <li><b>tfoot:</b>define o rodape ,ideal para somarios ou resumos</li>
+        </ul>
+
+        <h2>tabela aninhada</h2>
+
+        <P>
+            e possivel colocar uma tabela dentro de outra celula de tabela.
+            isso e conhecido como aninhamento de tabela.
+        </P>
+
+        <h3>exemplo de tabela aninhada:</h3>
+
+        <table border="1">
+            <tr>
+                <th>produto</th>
+                <th>detalhes</th>
+            </tr>
+            <tr>
+                <td>laptop</td>
+                <td>
+                    <table border="1">
+                        <tr>
+                            <th>modelo</th>
+                            <th>preço</th>
+                        </tr>
+                        <tr>
+                            <td>apple m1</td>
+                            <td>R$7.000,00</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+</body>
+</html>
