@@ -1,29 +1,27 @@
-
-
 header {
-    background-color: rgb#333;
-    color: white;
+    background-color: rgb#000000;
+    color: rgb(0, 0, 0);
     padding: 5px 20px 5px 20px;
     text-align: center;
-
+    margin: 0px 0px 50px 0px;
 }
 
 nav ul {
+    background-color: #000000;
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
+    background-color: #000000;
     display: inline;
     margin-right: 15px;
-    text-align: center;
 }
 
 main{
     margin: 15px;
     padding: 20px;
-    background-color:#ffffff ;
+    background-color:#cccccc ;
 }
 
 section {
@@ -36,7 +34,7 @@ section {
 aside {
     background-color: #a0caf1;
     padding: 15px;
-    border-radius: 5px solid  #444;
+    border-radius: 5px solid  #000000;
 }
 footer{
     background-color: #333;
