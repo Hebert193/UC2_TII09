@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0%;
+            padding:0%;
+        }
+
+        body{
+            height: 100%;
+        }
+
+        .content{
+            min-height: calc(100vh - 200px);
+            background-color: darkgrey;
+        }
+
+        header{
+            height: 100px;
+            background-color:darkgrey;
+        }
+
+        .floating-ad{
+            position: fixed;
+            right:20px;
+            bottom:20px;
+            background-color: yellow;
+            border: 2px solid;
+            height: 50px;
+            width: 200px;
+            padding-top: 25px ;
+            text-align: center;
+        }
+
+        footer{
+            height: 100px;
+            background-color: darkgrey;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>cabeçalho da pagina</h1>
+    </header>
+    <div class="floating-ad">
+        <p>promoção! aproveite!</p>
+    </div>
+    <div class="content">
+        <p>conteudo da pagina</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 sua empresa. todos os direitos reservados</p>
+    </footer>
+    
+</body>
+</html>
